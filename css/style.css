@@ -61,7 +61,7 @@ body {
 
 .feedback {
   box-sizing: border-box;
-  width: 390px;
+  max-width: 390px;
   padding: 50px 30px 54px;
   margin: auto;
 
@@ -657,6 +657,9 @@ body {
   display: inline-block;
   margin-right: 10px;
 
+  line-height: 1.2;
+  font-weight: 400;
+
   color: #888888;
 }
 
@@ -666,6 +669,7 @@ body {
 
   font-weight: 700;
   font-style: normal;
+  line-height: 1.2;
 }
 
 .article-content {
@@ -1147,22 +1151,22 @@ body {
     background-image: url("../img/banner-bg-tablet.jpg");
   }
 
-  .header-logo {
-    width: 158px;
-  }
-
   .container {
     width: 90.756%;
     padding-left: 0;
     padding-right: 0;
   }
 
-  .menu-list {
-    display: none;
+  .header-logo {
+    width: 158px;
   }
 
   .menu-button {
     display: block;
+  }
+
+  .menu-list {
+    display: none;
   }
 
   .header-title-container {
@@ -1178,11 +1182,6 @@ body {
   .posts {
     min-width: 641px;
     width: 100%;
-  }
-
-  .post {
-    flex-basis: 49.8%;
-    margin-right: 0.4%;
   }
 
   .post-right {
@@ -1264,7 +1263,7 @@ body {
   }
 
   .product-info {
-    width: 83%;
+    width: 85.757%;
   }
 
   .product-tablet-even-right {
@@ -1295,20 +1294,33 @@ body {
   }
 }
 
-@media (min-width: 641px) and (max-width: 768px) and (orientation: landscape) {
-  .products {
-    margin-right: auto;
-    margin-left: auto;
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
+  .post {
+    flex-basis: 49.8%;
+    margin-right: 0.4%;
   }
 
-  .product-info {
-    width: 83%;
+  .post-portrait-right {
+    margin-right: 0;
+  }
+}
+
+
+@media (min-width: 641px) and (max-width: 767px) and (orientation: landscape) {
+  .products {
+    width: 582px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .products-block {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .product-info {
+    width: 83%;
   }
 }
 
@@ -1321,6 +1333,10 @@ body {
 }
 
 @media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+  .posts-block {
+    flex-wrap: nowrap;
+  }
+
   .post {
     flex-basis: 24.7%;
     margin-right: 0.4%;
@@ -1335,7 +1351,290 @@ body {
   }
 }
 
+@media (min-width: 320px) and (max-width: 640px) {
+  .header {
+    min-width: 320px;
+    margin-bottom: 40px;
+    padding-top: 31px;
+    padding-bottom: 210px;
 
-@media (max-width: 640px) {
+    background-image: url("../img/banner-mobile.jpg");
+  }
 
+  .container {
+    width: 91.67%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .header-top {
+    flex-wrap: nowrap;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    margin-bottom: 35px;
+  }
+
+  .header-logo {
+    width: 269px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .nav {
+    margin-bottom: 174px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .header-title-container {
+    width: 299px;
+  }
+
+  .header-title {
+    font-size: 26px;
+    line-height: 1.39;
+    font-weight: 700;
+  }
+
+  .main {
+    margin-bottom: 44px;
+  }
+
+  .posts {
+    min-width: 330px;
+    margin-bottom: 45px;
+  }
+
+  .posts-title {
+    font-size: 16px;
+  }
+
+  .posts-title::after {
+    background-color: rgba(181, 159, 91, 0.4);
+  }
+
+  .posts-block {
+    flex-direction: column;
+  }
+
+  .post {
+    width: 100%;
+    margin-bottom: 2px;
+    margin-right: 0;
+    padding-top: 89px;
+  }
+
+  .post-info-link {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .main-content {
+    flex-direction: column;
+    max-width: 330px;
+    margin-bottom: 60px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .articles {
+    width: 330px;
+    margin-bottom: 44px;
+  }
+
+  .article {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 22px;
+
+    border-bottom: 2px solid #ededed;
+  }
+
+  .article-top {
+    margin-top: 35px;
+  }
+
+  .article-preview {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .article:last-child {
+    border-bottom: none;
+  }
+
+  .article-image {
+    width: 330px;
+  }
+
+  .article-info {
+    width: 330px;
+  }
+
+  .article-header {
+    margin-bottom: 23px;
+  }
+
+  .article-title {
+    margin-bottom: 24px;
+
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 700;
+  }
+
+  .article-content {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+
+  .article-paragraph:last-child {
+    margin-bottom: 0;
+  }
+
+  .sidebar {
+    width: 330px;
+  }
+
+  .field-search {
+    width: 282px;
+  }
+
+  .sidebar-title {
+    font-size: 16px;
+  }
+
+  .sidebar-title::after {
+    background-color: rgba(181, 159, 91, 0.4);
+  }
+
+  .sidebar-news-title {
+    line-height: 1.285;
+  }
+
+  .sidebar-tags-item {
+    margin-right: auto;
+  }
+
+  .products {
+    max-width: 330px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .products-title {
+    font-size: 16px;
+  }
+
+  .products-title::after {
+    background-color: rgba(181, 159, 91, 0.4);
+  }
+
+  .product {
+    width: 330px;
+    margin-right: 0;
+    margin-bottom: 27px;
+  }
+
+  .product-picture {
+    width: 284px;
+  }
+
+  .product-info {
+    box-sizing: border-box;
+    width: 330px;
+  }
+
+  .product-info-title {
+    font-size: 17px;
+  }
+
+  .footer {
+    margin-bottom: 45px;
+  }
+
+  .footer-top-content {
+    margin-bottom: 50px;
+  }
 }
+
+@media (min-width: 320px) and (max-width: 359px) {
+  .popup-container {
+    max-width: 290px;
+  }
+
+  .header,
+  .posts {
+    min-width: 320px;
+  }
+
+  .container {
+    width: 87.88%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .sidebar,
+  .articles,
+  .article-preview,
+  .article-image,
+  .article-info,
+  .product,
+  .product-info {
+    width: 100%;
+  }
+
+  .post-info {
+    width: 86%;
+  }
+
+  .post-info-content {
+    padding-left: 10%;
+    padding-right: 3%;
+  }
+
+  .field-search {
+    width: 242px;
+  }
+
+  .button-search {
+    width: 48px;
+  }
+
+  .sidebar-tags-item {
+    margin-right: 6px;
+  }
+
+  .product-picture {
+    width: 100%;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 640px) {
+  .popup-container {
+    max-width: 330px;
+  }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+  .posts-block {
+    flex-direction: row;
+  }
+
+  .post {
+    flex-basis: 49.8%;
+  }
+
+  .post-item-odd {
+    margin-right: 0.4%;
+  }
+}
+
